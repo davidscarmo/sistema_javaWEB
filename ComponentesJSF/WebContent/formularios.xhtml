@@ -3,9 +3,20 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html">
 <h:head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-<title>Projeto JSF</title>
+<title>Componentes </title>
 </h:head>
 <h:body>
-	<h:outputText value="Bem vindo ao curso!"> </h:outputText>
+	<h:outputText value="Componentes de Formulários"/> 
+	
+		<h:form>
+			<h:panelGrid columns="2">
+				<h:outputLabel value ="Nome: "/>
+				<h:inputText maxlength="30" size ="30" />
+				
+				<h:outputLabel value ="Senha: "/>
+				<h:inputSecret maxlength="7" size ="30" />
+			</h:panelGrid>	
+		</h:form>
+	
 </h:body>
 </html>

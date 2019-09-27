@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="ISO-8859-1" ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html">
+<html xmlns="http://www.w3.org/1999/xhtml" 
+xmlns:h="http://java.sun.com/jsf/html"
+xmlns:f="http://java.sun.com/jsf/core"
+>
 <h:head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
 <title>Componentes </title>
@@ -15,7 +18,39 @@
 				
 				<h:outputLabel value ="Senha: "/>
 				<h:inputSecret maxlength="7" size ="30" />
+				
+				<h:outputLabel value ="Mensagem" />
+				<h:inputTextarea cols="30" rows ="5"/> 
+				
+				
+				<h:outputLabel value ="Hobbies: "/>
+				<h:selectOneRadio>
+					<f:selectItem itemValue ="E" itemLabel ="Esportes"/>
+					<f:selectItem itemValue ="F" itemLabel ="Filmes"/>
+					<f:selectItem itemValue ="V" itemLabel ="Viagens"/>
+				</h:selectOneRadio>
+				
+				<h:outputLabel value ="Estado Civil: "/>
+				<h:selectOneRadio>
+					<f:selectItem itemValue ="D" itemLabel ="Divorciado"/>
+					<f:selectItem itemValue ="S" itemLabel ="Solteiro"/>
+				</h:selectOneRadio>
+				
+				<h:outputLabel value ="Estado : "/>
+				<h:selectOneMenu>
+					<f:selectItem itemValue ="SP" itemLabel ="S�o Paulo"/>
+					<f:selectItem itemValue ="MG" itemLabel ="Minas Gerais"/>
+					<f:selectItem itemValue ="RJ" itemLabel ="Rio de Janeiro"/>
+				</h:selectOneMenu>
 			</h:panelGrid>	
+			
+			<h:panelGrid columns="4">
+					<h:commandButton value ="Salvar"/>
+					<h:commandButton value ="Editar"/>
+					<h:commandButton value ="Cancelar"/>
+					<h:commandButton value ="Fechar"/>
+					<h:commandLink value ="voltar" />	
+			</h:panelGrid>
 		</h:form>
 	
 </h:body>

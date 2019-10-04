@@ -10,6 +10,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import br.com.SistemaLogin.exception.InvalidUserException;
+
 /**
  * Servlet implementation class LoginControllers
  */
@@ -42,13 +44,9 @@ public class LoginControllers extends HttpServlet {
 		String nomeUsuario = req.getParameter("txtUsuario"); 
 		String nomeSenha = req.getParameter("txtSenha"); 
 		
-		if(nomeUsuario.trim().equals("") || nomeSenha.trim().equals(""))
+		if(!nomeUsuario.trim().equals("David") || !nomeSenha.trim().equals("123"))
 		{
-			throw new ServletException("Preencha os Campos!!"); 
-		}
-		else if(!nomeUsuario.trim().equals("David") || !nomeSenha.trim().equals("123"))
-		{
-			
+			throw new invalidUserException("Login ou senha inválidos!");
 		}
 	}
 	

@@ -12,18 +12,14 @@ public class CriarConexao
 	{
 		try
 		{
-			Class.forName("com.mysql.jdbc.Driver"); 
+			Class.forName("com.mysql.cj.jdbc.Driver");
 			System.out.println("Conectado");
-			//sofrerá mudanças quando for hospedado 
-			return DriverManager.getConnection("jdbc:mysql://localhost/SistemaLogin", "root", "123456");
+			
+			return DriverManager.getConnection("jdbc:mysql://localhost/SistemaLogin?useTimezone=true&serverTimezone=UTC", "root", "123456");
 		}
-		catch(SQLException e)
+		catch(SQLException | ClassNotFoundException e)
 		{
 			throw new SQLException(e);
-		}
-		catch(ClassNotFoundException e1)
-		{
-			throw new SQLException(e1);
 		}
 	}
 

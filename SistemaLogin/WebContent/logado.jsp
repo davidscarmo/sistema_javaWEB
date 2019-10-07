@@ -15,5 +15,8 @@
 	
 	Seja Bem Vindo <%=nomeUsuario %> | <a href="remover.jsp">Sair </a>
 	<h2>Logado com sucesso!</h2>
+	<form action ="cadastrarLogin.jsp">
+		<td colspan="2"><input type="submit" value="Cadastrar" /></td>
+	</form>
 </body>
 </html>

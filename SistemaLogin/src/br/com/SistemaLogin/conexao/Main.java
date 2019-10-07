@@ -12,13 +12,7 @@ public class Main
 	
 public static void main(String[] args) throws SQLException
 {
-	Connection con = CriarConexao.getConexao();
-	Login l = new Login();
-	l.setUsuario("David");
-	l.setSenha("123456");
 	
-	LoginDAO dao = new LoginDAO(con);
-	dao.adicionar(l);
 }
 
 

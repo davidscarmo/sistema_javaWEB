@@ -12,10 +12,18 @@
   
   <error-page>
   	<exception-type>
-  		br.com.SistemaLogin.exception.invalidUserException
+  		br.com.SistemaLogin.exception.InvalidUserException
   	</exception-type>
   	<location>
   		/errodeusuario.jsp
   	</location>
   </error-page>
+  
+  <error-page>
+	  <error-code>500</error-code>
+	  	<location>
+	  		/errodeusuario.jsp
+	  	</location>
+  </error-page>	
+  
 </web-app>
